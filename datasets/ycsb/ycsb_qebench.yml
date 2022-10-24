@@ -1,0 +1,75 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for PERF-3188 - YCSB testing of unencrypted vs FLE vs QE
+workload_name: ycsb_qebench
+patches:
+  # This excludes the 3-node, 5-field QE test executions because they timed
+  # in the final phase.
+  # This excludes the unencrypted & FLE sharded test executions because
+  # sharding was not actually enabled.
+  # This excludes the sharded QE, 50-values, CF=default test results because
+  # it was not configured correctly.
+  631ba34b9ccd4e74f086c49f:
+    linux-3-node-replSet-qebench:
+    - "qebench_fle_1enc_50"
+    - "qebench_fle_1enc_unique"
+    - "qebench_fle_5enc_50"
+    - "qebench_fle_5enc_unique"
+    - "qebench_qe_1enc_50_cf16"
+    - "qebench_qe_1enc_50_cf32"
+    - "qebench_qe_1enc_50_cfdefault"
+    - "qebench_qe_1enc_unique_cfdefault"
+    - "qebench_raw_50"
+    - "qebench_raw_unique"
+    linux-shard-lite-qebench:
+    - "qebench_qe_1enc_50_cf16"
+    - "qebench_qe_1enc_50_cf32"
+    - "qebench_qe_1enc_50_cfdefault"
+    - "qebench_qe_1enc_unique_cfdefault"
+    - "qebench_qe_5enc_50_cf16"
+    - "qebench_qe_5enc_50_cf32"
+    - "qebench_qe_5enc_unique_cfdefault"
+  # This patch reruns the 3-node, 5-field QE tests that timed out in the
+  # previous patch.
+  # The 50-values, CF=default test results are excluded as the workload was not
+  # configured with the correct parameters during its executions.
+  63370677850e61112f611626:
+    linux-3-node-replSet-qebench:
+    - "qebench_qe_5enc_50_cf16"
+    - "qebench_qe_5enc_50_cf32"
+    - "qebench_qe_5enc_unique_cfdefault"
+  # This patch reruns the sharded unencrypted & FLE workloads that were not
+  # actually sharded in the previous patches.
+  63484000e3c3315c1eb98333:
+    linux-shard-lite-qebench:
+    - "qebench_fle_1enc_50"
+    - "qebench_fle_1enc_unique"
+    - "qebench_fle_5enc_50"
+    - "qebench_fle_5enc_unique"
+    - "qebench_raw_50"
+    - "qebench_raw_unique"
+  # This patch reruns the QE, 50-values, CF=default tests with correct parameters.
+  634e26cb3e8e86143a307f7e:
+    linux-3-node-replSet-qebench:
+    - "qebench_qe_5enc_50_cfdefault"
+    linux-shard-lite-qebench:
+    - "qebench_qe_5enc_50_cfdefault"
+storage_metrics:
+  tests:
+  - "ycsb_load Storage Metrics"
+  - "ycsb_100read Storage Metrics"
+  - "ycsb_50read50update Storage Metrics"
+  - "ycsb_95read5update Storage Metrics"
+  - "ycsb_100update Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "ycsb_load Timing Metrics"
+  - "ycsb_100read Timing Metrics"
+  - "ycsb_50read50update Timing Metrics"
+  - "ycsb_95read5update Timing Metrics"
+  - "ycsb_100update Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/home/ubuntu/erwee/genny/build/curator/curator"

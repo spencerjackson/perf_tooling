@@ -1,0 +1,73 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for PERF-3189 - Genny testing of unencrypted vs FLE vs QE
+workload_name: ycsblike
+patches:
+  # This patch excludes the sharded test results because sharding was not
+  # actually enabled.
+  63370d281e2d174e799c1141:
+    linux-3-node-replSet-qebench:
+    - "genny_qebench_fle_1enc"
+    - "genny_qebench_fle_5enc"
+    - "genny_qebench_qe_1enc_cf16"
+    - "genny_qebench_qe_1enc_cf32"
+    - "genny_qebench_qe_1enc_cfdefault"
+    - "genny_qebench_qe_5enc_cf16"
+    - "genny_qebench_qe_5enc_cf32"
+    - "genny_qebench_qe_5enc_cfdefault"
+    - "genny_qebench_unencrypted"
+  # This patch is a re-run of the sharded tests, where sharding is enabled
+  # on the test collection before running the CRUD phases.
+  634404703066152024a287dc:
+    linux-shard-lite-qebench:
+    - "genny_qebench_fle_1enc"
+    - "genny_qebench_fle_5enc"
+    - "genny_qebench_qe_1enc_cf16"
+    - "genny_qebench_qe_1enc_cf32"
+    - "genny_qebench_qe_1enc_cfdefault"
+    - "genny_qebench_qe_5enc_cf16"
+    - "genny_qebench_qe_5enc_cf32"
+    - "genny_qebench_qe_5enc_cfdefault"
+    - "genny_qebench_unencrypted"
+genny_metrics:
+  tests:
+  - "YCSBLike.load.inserts"
+  - "YCSBLike.100read.reads"
+  - "YCSBLike.95read5update.reads"
+  - "YCSBLike.95read5update.writes"
+  - "YCSBLike.50read50update.reads"
+  - "YCSBLike.50read50update.writes"
+  - "YCSBLike.100update.writes"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+storage_metrics:
+  tests:
+  - "crud_actor_qe Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "crud_actor_qe Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/home/ubuntu/erwee/genny/build/curator/curator"

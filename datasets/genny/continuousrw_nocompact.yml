@@ -1,0 +1,36 @@
+workload_name: continuousrw_nocompact
+patches:
+  634405351e2d171a12b2a0a8:
+    linux-3-node-replSet-qebench:
+    - "genny_qebench_continuousrw_nocompact"
+    linux-shard-lite-qebench:
+    - "genny_qebench_continuousrw_nocompact"
+genny_metrics:
+  tests:
+  - "ContinuousRW.Crud"
+  - "ContinuousRW.update"
+  - "ContinuousRW.insert"
+  - "ContinuousRW.find"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+curator: "/home/ubuntu/erwee/genny/build/curator/curator"

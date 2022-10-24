@@ -1,0 +1,46 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for ERF-3190 - Genny testing of FLE & QE using mongocryptd
+workload_name: ycsblike_cryptd
+patches:
+  6340ca683e8e864788068304:
+    linux-3-node-replSet-qebench:
+    - "genny_qebench_fle_1enc"
+    - "genny_qebench_fle_5enc"
+    - "genny_qebench_qe_1enc_cf16"
+    - "genny_qebench_qe_1enc_cf32"
+    - "genny_qebench_qe_1enc_cfdefault"
+    - "genny_qebench_qe_5enc_cf16"
+    - "genny_qebench_qe_5enc_cf32"
+    - "genny_qebench_qe_5enc_cfdefault"
+genny_metrics:
+  tests:
+  - "YCSBLike.load.inserts"
+  - "YCSBLike.100read.reads"
+  - "YCSBLike.95read5update.reads"
+  - "YCSBLike.95read5update.writes"
+  - "YCSBLike.50read50update.reads"
+  - "YCSBLike.50read50update.writes"
+  - "YCSBLike.100update.writes"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+curator: "/home/ubuntu/erwee/genny/build/curator/curator"

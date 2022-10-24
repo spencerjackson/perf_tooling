@@ -1,0 +1,10 @@
+requests
+PyYAML
+pandas
+matplotlib
+scipy
+numpy
+seaborn
+jupyter
+ipykernel
+evergreen.py

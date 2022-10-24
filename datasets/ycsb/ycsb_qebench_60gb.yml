@@ -1,0 +1,21 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for PERF-3194 - disk-based YCSB testing of QE with 60GB data.
+workload_name: ycsb_qebench_60gb
+patches:
+  # This excludes the 3-node, 5-field QE test executions because they timed
+  # in the final phase.
+  # This excludes the unencrypted & FLE sharded test executions because
+  # sharding was not actually enabled.
+  # This excludes the sharded QE, 50-values, CF=default test results because
+  # it was not configured correctly.
+  634db8432fbabe4d60d6b89f:
+    linux-3-node-replSet-qebench:
+    - "ycsb60GB_qebench_qe_1enc_50_cf16"
+    - "ycsb60GB_qebench_qe_1enc_50_cf32"
+    - "ycsb60GB_qebench_qe_1enc_unique_cfdefault"
+  634e25ac850e612055a9a2ef:
+    linux-3-node-replSet-qebench:
+    - "ycsb60GB_qebench_qe_5enc_50_cf16"
+    - "ycsb60GB_qebench_qe_5enc_50_cf32"
+    - "ycsb60GB_qebench_qe_5enc_50_cfdefault"
+    - "ycsb60GB_qebench_qe_5enc_unique_cfdefault"
