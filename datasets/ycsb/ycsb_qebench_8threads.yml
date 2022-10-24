@@ -1,0 +1,44 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for PERF-3188 - YCSB testing of unencrypted vs FLE vs QE.
+#
+# This workload ran with 8 threads, instead of the usual 32.
+#
+workload_name: ycsb_qebench_8threads
+patches:
+  6355c6045623433e0105d221:
+    linux-3-node-replSet-qebench: &tasks
+    - "qebench_fle_1enc_50"
+    - "qebench_fle_1enc_unique"
+    - "qebench_fle_5enc_50"
+    - "qebench_fle_5enc_unique"
+    - "qebench_qe_1enc_50_cf16"
+    - "qebench_qe_1enc_50_cf32"
+    - "qebench_qe_1enc_50_cfdefault"
+    - "qebench_qe_1enc_unique_cfdefault"
+    - "qebench_qe_5enc_50_cf16"
+    - "qebench_qe_5enc_50_cf32"
+    - "qebench_qe_5enc_50_cfdefault"
+    - "qebench_qe_5enc_unique_cfdefault"
+    - "qebench_raw_50"
+    - "qebench_raw_unique"
+    linux-shard-lite-qebench: *tasks
+storage_metrics:
+  tests:
+  - "ycsb_load Storage Metrics"
+  - "ycsb_100read Storage Metrics"
+  - "ycsb_50read50update Storage Metrics"
+  - "ycsb_95read5update Storage Metrics"
+  - "ycsb_100update Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "ycsb_load Timing Metrics"
+  - "ycsb_100read Timing Metrics"
+  - "ycsb_50read50update Timing Metrics"
+  - "ycsb_95read5update Timing Metrics"
+  - "ycsb_100update Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/home/ubuntu/erwee/genny/build/curator/curator"

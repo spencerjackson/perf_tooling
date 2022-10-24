@@ -132,6 +132,7 @@ dmypy.json
 datasets/ycsb/ycsb_qebench
 datasets/ycsb/ycsb_qebench_cryptd
 datasets/ycsb/ycsb_qebench_60gb
+datasets/ycsb/ycsb_qebench_8threads
 datasets/genny/ycsblike
 datasets/genny/continuousrw_nocompact
 datasets/genny/continuousrw_compact
