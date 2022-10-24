@@ -33,8 +33,8 @@ To obtain YCSB summary statistics as CSV:
 cd datasets/ycsb
 # first, download & extract the artifacts that contain the test output logs
 ./postprocess.sh fetch_artifacts <config_yaml>
-# next, run update_ycsb_data to parse & gather the summary stats per execution
-./postprocess.sh update_ycsb_data <config_yaml>
+# next, run update_ycsb_summary_stats to parse & gather the summary stats per execution
+./postprocess.sh update_ycsb_summary_stats <config_yaml>
 # lastly, run ycsb_stats to aggregate the per-execution stats into one big CSV
 ./postprocess.sh ycsb_stats <config_yaml>
 ```
