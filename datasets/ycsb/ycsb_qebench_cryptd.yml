@@ -4,19 +4,19 @@ workload_name: ycsb_qebench_cryptd
 patches:
   # The 50-values, CF=default test results are excluded as the workload was not
   # configured with the correct parameters during its executions.
-  # 633ae35e57e85a5205f11e33:
-  #   linux-3-node-replSet-qebench:
-  #   - "qebench_fle_1enc_50"
-  #   - "qebench_fle_1enc_unique"
-  #   - "qebench_fle_5enc_50"
-  #   - "qebench_fle_5enc_unique"
-  #   - "qebench_qe_1enc_50_cf16"
-  #   - "qebench_qe_1enc_50_cf32"
-  #   - "qebench_qe_1enc_50_cfdefault"
-  #   - "qebench_qe_1enc_unique_cfdefault"
-  #   - "qebench_qe_5enc_50_cf16"
-  #   - "qebench_qe_5enc_50_cf32"
-  #   - "qebench_qe_5enc_unique_cfdefault"
+  633ae35e57e85a5205f11e33:
+    linux-3-node-replSet-qebench:
+    - "qebench_fle_1enc_50"
+    - "qebench_fle_1enc_unique"
+    - "qebench_fle_5enc_50"
+    - "qebench_fle_5enc_unique"
+    - "qebench_qe_1enc_50_cf16"
+    - "qebench_qe_1enc_50_cf32"
+    - "qebench_qe_1enc_50_cfdefault"
+    - "qebench_qe_1enc_unique_cfdefault"
+    - "qebench_qe_5enc_50_cf16"
+    - "qebench_qe_5enc_50_cf32"
+    - "qebench_qe_5enc_unique_cfdefault"
   # This patch reruns the QE, 50-values, CF=default tests with correct parameters.
   634ec5d12fbabe5138286776:
     linux-3-node-replSet-qebench:
