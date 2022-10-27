@@ -138,3 +138,4 @@ datasets/genny/continuousrw_nocompact
 datasets/genny/continuousrw_compact
 datasets/genny/ycsblike_cryptd
 datasets/genny/ycsblike_8threads
+datasets/genny/exponential_compact
