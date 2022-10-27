@@ -1,9 +1,10 @@
 workload_name: continuousrw_nocompact
 patches:
   634405351e2d171a12b2a0a8:
-    linux-3-node-replSet-qebench:
-    - "genny_qebench_continuousrw_nocompact"
     linux-shard-lite-qebench:
+    - "genny_qebench_continuousrw_nocompact"
+  63594d4161837d3b6708fdd5:
+    linux-3-node-replSet-qebench:
     - "genny_qebench_continuousrw_nocompact"
 genny_metrics:
   tests:
