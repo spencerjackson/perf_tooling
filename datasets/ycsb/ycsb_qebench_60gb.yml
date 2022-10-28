@@ -8,9 +8,39 @@ patches:
     - "ycsb60GB_qebench_qe_1enc_50_cf32"
     - "ycsb60GB_qebench_qe_1enc_50_cfdefault"
     - "ycsb60GB_qebench_qe_1enc_unique_cfdefault"
+    linux-shard-lite-qebench:
+    - "ycsb60GB_qebench_qe_1enc_50_cf16"
+    - "ycsb60GB_qebench_qe_1enc_50_cf32"
+    - "ycsb60GB_qebench_qe_1enc_50_cfdefault"
+    - "ycsb60GB_qebench_qe_1enc_unique_cfdefault"
   634e25ac850e612055a9a2ef:
     linux-3-node-replSet-qebench:
     - "ycsb60GB_qebench_qe_5enc_50_cf16"
     - "ycsb60GB_qebench_qe_5enc_50_cf32"
     - "ycsb60GB_qebench_qe_5enc_50_cfdefault"
     - "ycsb60GB_qebench_qe_5enc_unique_cfdefault"
+    linux-shard-lite-qebench:
+    - "ycsb60GB_qebench_qe_5enc_50_cf16"
+    - "ycsb60GB_qebench_qe_5enc_50_cf32"
+    - "ycsb60GB_qebench_qe_5enc_50_cfdefault"
+    - "ycsb60GB_qebench_qe_5enc_unique_cfdefault"
+storage_metrics:
+  tests:
+  - "ycsb_load Storage Metrics"
+  - "ycsb_100read Storage Metrics"
+  - "ycsb_50read50update Storage Metrics"
+  - "ycsb_95read5update Storage Metrics"
+  - "ycsb_100update Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "ycsb_load Timing Metrics"
+  - "ycsb_100read Timing Metrics"
+  - "ycsb_50read50update Timing Metrics"
+  - "ycsb_95read5update Timing Metrics"
+  - "ycsb_100update Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+
