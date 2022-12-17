@@ -21,6 +21,7 @@ def fetch_ftdc_files(workload, task):
     if workload.genny_metrics is None:
         raise Exception(f"Must specify a genny_metrics element in config YAML to fetch ftdc artifacts")
 
+    print("Fetch genny metrics: %s", task)
     tid = task.task_id
     try:
         rsp = requests.get(f"https://cedar.mongodb.com/rest/v1/perf/task_id/{tid}")
@@ -29,11 +30,15 @@ def fetch_ftdc_files(workload, task):
         print(f"Cedar fetch failed for task {tid}")
         return
 
+
+    print("Genny metrics: %s", rsp.text)
     json_obj = rsp.json()
+
     for obj in json_obj:
         test_name = obj["info"]["test_name"]
         if test_name not in workload.genny_metrics.tests:
             continue
+
         execution = obj["info"]["execution"]
 
         task_execution = task.get_execution(execution)
@@ -43,6 +48,7 @@ def fetch_ftdc_files(workload, task):
         if os.path.exists(path):
             print(f"Artifact at {path} already exists. Skipping download.")
             continue
+
         try:
             uri = obj["artifacts"][0]["download_url"]
             print(f"Fetching {uri}...")

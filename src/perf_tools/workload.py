@@ -37,14 +37,20 @@ class Patch:
 
         # get the build info
         builds = api.builds_by_version(patch_id)
+
         # filter by the selected build variants
         filtered_builds = [x for x in builds if x.build_variant in patch_cfg]
+        if len(filtered_builds) == 0:
+            raise ValueError("Did not find any builds after filtering in the patch\nExpected: %s\nActual: %s\n:" % (patch_cfg, [x.build_variant for x in builds]))
 
         for build in filtered_builds:
             for task_id in build.tasks:
                 task = api.task_by_id(task_id, fetch_all_executions=True)
                 if task.display_name in patch_cfg[build.build_variant]:
                     self.task_executions.append(task)
+
+        if len(self.task_executions) == 0:
+            raise ValueError("Did not find any task executions")
 
     def iterate_executions(self, workload, callback):
         for task in self.task_executions:

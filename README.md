@@ -18,7 +18,7 @@ To obtain storage statistics as CSV:
 ``` sh
 cd datasets/genny  # or datasets/ycsb
 ./postprocess.sh storage_stats <config_yaml>
-```
+```****
 There must be a `storage_metrics` node in the `config_yaml` that lists the test names & metric names to parse from the cedar report.
 
 To obtain timing statistics as CSV:

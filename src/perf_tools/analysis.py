@@ -62,6 +62,7 @@ def get_raw_data(jsonFile):
         "gauges.failed": [],
         "ts":[]
     }
+
     with open(jsonFile) as f:
         for line in f:
             loaded = json.loads(line)
@@ -93,7 +94,6 @@ def get_data(jsonFile):
         "gauges.failed": 0,
     }, index=[-1])
     intermediate = pandas.concat([new_row, raw_data])
-    intermediate
 
     fixed_data = pandas.DataFrame()
     fixed_data["actor_id"] = intermediate["id"]
@@ -193,15 +193,17 @@ def plot_latency_stats(df, xaxis, title=None, regr=None, ax=None, start=None, en
     calc_stats["simple moving avg k=1024"] = df[ylabel].rolling(1024).mean()
     calc_stats["cumulative mean(ms)"] = df["mean_pure_latency(ms)"]
     calc_stats["cumulative median(ms)"] = df["median_pure_latency(ms)"]
-    if regr is "log":
+
+    if regr == "log":
         fit = np.polyfit(np.log2(df[xaxis]), df[ylabel], 1)
         polyfunc=str(fit[0]) + " log2(x) + " + str(fit[1])
         calc_stats["least sq poly y=" + polyfunc] = np.log2(df[xaxis]) * fit[0] + fit[1]
         print(polyfunc)
-    elif regr is "line":
+    elif regr == "line":
         fit = np.polyfit(df[xaxis], df[ylabel], 1)
         polyfunc=str(fit[0]) + " x + " + str(fit[1])
         calc_stats["least sq poly y=" + polyfunc] = df[xaxis] * fit[0] + fit[1]
         print(polyfunc)
+
     return calc_stats[start:end].plot(ax=ax, x=xaxis, figsize=(20,20), ylabel="milliseconds", title=title)
 
