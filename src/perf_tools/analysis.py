@@ -124,6 +124,7 @@ def get_summary_statistics(b, fixed_data, raw_data):
     overhead = fixed_data["d(t_overhead)"].sum()
     return {
         'AverageLatency': averages["pure_latency"],
+        'AverageLatencyMillis': averages["pure_latency(ms)"],
         'AverageSize': size / ops,
         'OperationThroughput': ops / duration,
         'DocumentThroughput': docs / duration,

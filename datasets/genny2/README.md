@@ -14,7 +14,7 @@ Download data from EVG
 ./postprocess.sh fetch_ftdc perf1.yml
 ```
 
-# Step 3:
+# Step 3:****
 
 Postprocess FTDC into JSON
 
@@ -25,6 +25,7 @@ Postprocess FTDC into JSON
 # Notebooks
 
 Open these jupyter notebooks, see https://jupyter.org/
+OR use VS Code - https://code.visualstudio.com
 
 notebooks/es_summary_analysis.ipynb
 notebooks/es1_analysis.ipynb
