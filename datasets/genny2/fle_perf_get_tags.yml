@@ -1,0 +1,112 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for PERF-3189 - Genny testing of unencrypted vs FLE vs QE
+workload_name: fle_perf_get_tags
+patches:
+  # This patch excludes the sharded test results because sharding was not
+  # actually enabled.
+  63bf6117c9ec4415c9ae5a9e:
+    linux-1-node-replSet-fle.2022-11:
+      - query_es2_16_16
+      - query_es2_16_1
+      - query_es2_16_4
+      - query_es2_16_8
+      - query_es2_1_16
+      - query_es2_1_1
+      - query_es2_1_4
+      - query_es2_1_8
+      - query_es2_4_16
+      - query_es2_4_1
+      - query_es2_4_4
+      - query_es2_4_8
+      - query_es2_8_16
+      - query_es2_8_1
+      - query_es2_8_4
+      - query_es2_8_8
+      - query_es3_16_16
+      - query_es3_16_1
+      - query_es3_16_4
+      - query_es3_16_8
+      - query_es3_1_16
+      - query_es3_1_1
+      - query_es3_1_4
+      - query_es3_1_8
+      - query_es3_4_16
+      - query_es3_4_1
+      - query_es3_4_4
+      - query_es3_4_8
+      - query_es3_8_16
+      - query_es3_8_1
+      - query_es3_8_4
+      - query_es3_8_8
+genny_metrics:
+  tests:
+  - "InsertActor.load.inserts"
+  - "InsertActor.q1.reads"
+  - "InsertActor.q2.reads"
+  - "InsertActor.q3.reads"
+  - "InsertActor.q4.reads"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+storage_metrics:
+  tests:
+  - "crud_actor_qe Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "query_es2_16_16 Timing Metrics"
+  - "query_es2_16_1 Timing Metrics"
+  - "query_es2_16_4 Timing Metrics"
+  - "query_es2_16_8 Timing Metrics"
+  - "query_es2_1_16 Timing Metrics"
+  - "query_es2_1_1 Timing Metrics"
+  - "query_es2_1_4 Timing Metrics"
+  - "query_es2_1_8 Timing Metrics"
+  - "query_es2_4_16 Timing Metrics"
+  - "query_es2_4_1 Timing Metrics"
+  - "query_es2_4_4 Timing Metrics"
+  - "query_es2_4_8 Timing Metrics"
+  - "query_es2_8_16 Timing Metrics"
+  - "query_es2_8_1 Timing Metrics"
+  - "query_es2_8_4 Timing Metrics"
+  - "query_es2_8_8 Timing Metrics"
+  - "query_es3_16_16 Timing Metrics"
+  - "query_es3_16_1 Timing Metrics"
+  - "query_es3_16_4 Timing Metrics"
+  - "query_es3_16_8 Timing Metrics"
+  - "query_es3_1_16 Timing Metrics"
+  - "query_es3_1_1 Timing Metrics"
+  - "query_es3_1_4 Timing Metrics"
+  - "query_es3_1_8 Timing Metrics"
+  - "query_es3_4_16 Timing Metrics"
+  - "query_es3_4_1 Timing Metrics"
+  - "query_es3_4_4 Timing Metrics"
+  - "query_es3_4_8 Timing Metrics"
+  - "query_es3_8_16 Timing Metrics"
+  - "query_es3_8_1 Timing Metrics"
+  - "query_es3_8_4 Timing Metrics"
+  - "query_es3_8_8 Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/home/mark/src/genny/build/curator/curator"
