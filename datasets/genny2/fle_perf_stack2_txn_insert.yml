@@ -1,0 +1,50 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for PERF-3189 - Genny testing of unencrypted vs FLE vs QE
+workload_name: fle_perf_stack2_txn_insert
+patches:
+  # This patch excludes the sharded test results because sharding was not
+  # actually enabled.
+  63d82f7656234349d7341d45:
+    linux-1-node-replSet-fle.2022-11:
+      - query_es1_1_1
+genny_metrics:
+  tests:
+  - "InsertActor.load.0"
+  - "InsertActor.q1.reads"
+  - "InsertActor.q2.reads"
+  - "InsertActor.q3.reads"
+  - "InsertActor.q4.reads"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+storage_metrics:
+  tests:
+  - "crud_actor_qe Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "query_es2_1_1 Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/home/mark/src/genny/build/curator/curator"

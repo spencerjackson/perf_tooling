@@ -1,0 +1,82 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for PERF-3189 - Genny testing of unencrypted vs FLE vs QE
+workload_name: fle_perf_stack2_query_in
+patches:
+  # This patch excludes the sharded test results because sharding was not
+  # actually enabled.
+  63d8bac10305b9386711938d:
+    linux-1-node-replSet-fle.2022-11:
+      - query_es2_16_16
+      - query_es2_16_1
+      - query_es2_16_4
+      - query_es2_16_8
+      - query_es2_1_16
+      - query_es2_1_1
+      - query_es2_1_4
+      - query_es2_1_8
+      - query_es2_4_16
+      - query_es2_4_1
+      - query_es2_4_4
+      - query_es2_4_8
+      - query_es2_8_16
+      - query_es2_8_1
+      - query_es2_8_4
+      - query_es2_8_8
+genny_metrics:
+  tests:
+  - "InsertActor.load.inserts"
+  - "InsertActor.q1.reads"
+  - "InsertActor.q2.reads"
+  - "InsertActor.q3.reads"
+  - "InsertActor.q4.reads"
+  - "InsertActor.q5.reads"
+  - "InsertActor.q6.7"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+storage_metrics:
+  tests:
+  - "crud_actor_qe Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "query_es2_16_16 Timing Metrics"
+  - "query_es2_16_1 Timing Metrics"
+  - "query_es2_16_4 Timing Metrics"
+  - "query_es2_16_8 Timing Metrics"
+  - "query_es2_1_16 Timing Metrics"
+  - "query_es2_1_1 Timing Metrics"
+  - "query_es2_1_4 Timing Metrics"
+  - "query_es2_1_8 Timing Metrics"
+  - "query_es2_4_16 Timing Metrics"
+  - "query_es2_4_1 Timing Metrics"
+  - "query_es2_4_4 Timing Metrics"
+  - "query_es2_4_8 Timing Metrics"
+  - "query_es2_8_16 Timing Metrics"
+  - "query_es2_8_1 Timing Metrics"
+  - "query_es2_8_4 Timing Metrics"
+  - "query_es2_8_8 Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/home/mark/src/genny/build/curator/curator"
