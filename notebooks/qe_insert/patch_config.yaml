@@ -1,0 +1,1067 @@
+# This workload file describes the evergreen patches and tasks that produced
+# reliable data for 
+workload_name: qe_test_insert
+patches:
+  # This patch excludes the sharded test results
+  63e149bf3e8e862138abedc7:
+    linux-1-node-replSet-fle.2022-11:
+      - insert_only_vlf_0_1_1
+      - insert_only_vlf_0_1_4
+      - insert_only_vlf_0_1_8
+      - insert_only_vlf_0_1_16
+      - insert_only_vlf_0_4_1
+      - insert_only_vlf_0_4_4
+      - insert_only_vlf_0_4_8
+      - insert_only_vlf_0_4_16
+      - insert_only_vlf_0_8_1
+      - insert_only_vlf_0_8_4
+      - insert_only_vlf_0_8_8
+      - insert_only_vlf_0_8_16
+      - insert_only_vlf_0_16_1
+      - insert_only_vlf_0_16_4
+      - insert_only_vlf_0_16_8
+      - insert_only_vlf_0_16_16
+      - insert_only_vlf_1_1_1
+      - insert_only_vlf_1_1_4
+      - insert_only_vlf_1_1_8
+      - insert_only_vlf_1_1_16
+      - insert_only_vlf_1_4_1
+      - insert_only_vlf_1_4_4
+      - insert_only_vlf_1_4_8
+      - insert_only_vlf_1_4_16
+      - insert_only_vlf_1_8_1
+      - insert_only_vlf_1_8_4
+      - insert_only_vlf_1_8_8
+      - insert_only_vlf_1_8_16
+      - insert_only_vlf_1_16_1
+      - insert_only_vlf_1_16_4
+      - insert_only_vlf_1_16_8
+      - insert_only_vlf_1_16_16
+      - insert_only_vlf_5_1_1
+      - insert_only_vlf_5_1_4
+      - insert_only_vlf_5_1_8
+      - insert_only_vlf_5_1_16
+      - insert_only_vlf_5_4_1
+      - insert_only_vlf_5_4_4
+      - insert_only_vlf_5_4_8
+      - insert_only_vlf_5_4_16
+      - insert_only_vlf_5_8_1
+      - insert_only_vlf_5_8_4
+      - insert_only_vlf_5_8_8
+      - insert_only_vlf_5_8_16
+      - insert_only_vlf_5_16_1
+      - insert_only_vlf_5_16_4
+      - insert_only_vlf_5_16_8
+      - insert_only_vlf_5_16_16
+      - insert_only_vlf_10_1_1
+      - insert_only_vlf_10_1_4
+      - insert_only_vlf_10_1_8
+      - insert_only_vlf_10_1_16
+      - insert_only_vlf_10_4_1
+      - insert_only_vlf_10_4_4
+      - insert_only_vlf_10_4_8
+      - insert_only_vlf_10_4_16
+      - insert_only_vlf_10_8_1
+      - insert_only_vlf_10_8_4
+      - insert_only_vlf_10_8_8
+      - insert_only_vlf_10_8_16
+      - insert_only_vlf_10_16_1
+      - insert_only_vlf_10_16_4
+      - insert_only_vlf_10_16_8
+      - insert_only_vlf_10_16_16
+      - insert_only_mlf_0_1_1
+      - insert_only_mlf_0_1_4
+      - insert_only_mlf_0_1_8
+      - insert_only_mlf_0_1_16
+      - insert_only_mlf_0_4_1
+      - insert_only_mlf_0_4_4
+      - insert_only_mlf_0_4_8
+      - insert_only_mlf_0_4_16
+      - insert_only_mlf_0_8_1
+      - insert_only_mlf_0_8_4
+      - insert_only_mlf_0_8_8
+      - insert_only_mlf_0_8_16
+      - insert_only_mlf_0_16_1
+      - insert_only_mlf_0_16_4
+      - insert_only_mlf_0_16_8
+      - insert_only_mlf_0_16_16
+      - insert_only_mlf_1_1_1
+      - insert_only_mlf_1_1_4
+      - insert_only_mlf_1_1_8
+      - insert_only_mlf_1_1_16
+      - insert_only_mlf_1_4_1
+      - insert_only_mlf_1_4_4
+      - insert_only_mlf_1_4_8
+      - insert_only_mlf_1_4_16
+      - insert_only_mlf_1_8_1
+      - insert_only_mlf_1_8_4
+      - insert_only_mlf_1_8_8
+      - insert_only_mlf_1_8_16
+      - insert_only_mlf_1_16_1
+      - insert_only_mlf_1_16_4
+      - insert_only_mlf_1_16_8
+      - insert_only_mlf_1_16_16
+      - insert_only_mlf_5_1_1
+      - insert_only_mlf_5_1_4
+      - insert_only_mlf_5_1_8
+      - insert_only_mlf_5_1_16
+      - insert_only_mlf_5_4_1
+      - insert_only_mlf_5_4_4
+      - insert_only_mlf_5_4_8
+      - insert_only_mlf_5_4_16
+      - insert_only_mlf_5_8_1
+      - insert_only_mlf_5_8_4
+      - insert_only_mlf_5_8_8
+      - insert_only_mlf_5_8_16
+      - insert_only_mlf_5_16_1
+      - insert_only_mlf_5_16_4
+      - insert_only_mlf_5_16_8
+      - insert_only_mlf_5_16_16
+      - insert_only_mlf_10_1_1
+      - insert_only_mlf_10_1_4
+      - insert_only_mlf_10_1_8
+      - insert_only_mlf_10_1_16
+      - insert_only_mlf_10_4_1
+      - insert_only_mlf_10_4_4
+      - insert_only_mlf_10_4_8
+      - insert_only_mlf_10_4_16
+      - insert_only_mlf_10_8_1
+      - insert_only_mlf_10_8_4
+      - insert_only_mlf_10_8_8
+      - insert_only_mlf_10_8_16
+      - insert_only_mlf_10_16_1
+      - insert_only_mlf_10_16_4
+      - insert_only_mlf_10_16_8
+      - insert_only_mlf_10_16_16
+      - insert_only_lf_0_1_1
+      - insert_only_lf_0_1_4
+      - insert_only_lf_0_1_8
+      - insert_only_lf_0_1_16
+      - insert_only_lf_0_4_1
+      - insert_only_lf_0_4_4
+      - insert_only_lf_0_4_8
+      - insert_only_lf_0_4_16
+      - insert_only_lf_0_8_1
+      - insert_only_lf_0_8_4
+      - insert_only_lf_0_8_8
+      - insert_only_lf_0_8_16
+      - insert_only_lf_0_16_1
+      - insert_only_lf_0_16_4
+      - insert_only_lf_0_16_8
+      - insert_only_lf_0_16_16
+      - insert_only_lf_1_1_1
+      - insert_only_lf_1_1_4
+      - insert_only_lf_1_1_8
+      - insert_only_lf_1_1_16
+      - insert_only_lf_1_4_1
+      - insert_only_lf_1_4_4
+      - insert_only_lf_1_4_8
+      - insert_only_lf_1_4_16
+      - insert_only_lf_1_8_1
+      - insert_only_lf_1_8_4
+      - insert_only_lf_1_8_8
+      - insert_only_lf_1_8_16
+      - insert_only_lf_1_16_1
+      - insert_only_lf_1_16_4
+      - insert_only_lf_1_16_8
+      - insert_only_lf_1_16_16
+      - insert_only_lf_5_1_1
+      - insert_only_lf_5_1_4
+      - insert_only_lf_5_1_8
+      - insert_only_lf_5_1_16
+      - insert_only_lf_5_4_1
+      - insert_only_lf_5_4_4
+      - insert_only_lf_5_4_8
+      - insert_only_lf_5_4_16
+      - insert_only_lf_5_8_1
+      - insert_only_lf_5_8_4
+      - insert_only_lf_5_8_8
+      - insert_only_lf_5_8_16
+      - insert_only_lf_5_16_1
+      - insert_only_lf_5_16_4
+      - insert_only_lf_5_16_8
+      - insert_only_lf_5_16_16
+      - insert_only_lf_10_1_1
+      - insert_only_lf_10_1_4
+      - insert_only_lf_10_1_8
+      - insert_only_lf_10_1_16
+      - insert_only_lf_10_4_1
+      - insert_only_lf_10_4_4
+      - insert_only_lf_10_4_8
+      - insert_only_lf_10_4_16
+      - insert_only_lf_10_8_1
+      - insert_only_lf_10_8_4
+      - insert_only_lf_10_8_8
+      - insert_only_lf_10_8_16
+      - insert_only_lf_10_16_1
+      - insert_only_lf_10_16_4
+      - insert_only_lf_10_16_8
+      - insert_only_lf_10_16_16
+      - insert_only_hf_0_1_1
+      - insert_only_hf_0_1_4
+      - insert_only_hf_0_1_8
+      - insert_only_hf_0_1_16
+      - insert_only_hf_0_4_1
+      - insert_only_hf_0_4_4
+      - insert_only_hf_0_4_8
+      - insert_only_hf_0_4_16
+      - insert_only_hf_0_8_1
+      - insert_only_hf_0_8_4
+      - insert_only_hf_0_8_8
+      - insert_only_hf_0_8_16
+      - insert_only_hf_0_16_1
+      - insert_only_hf_0_16_4
+      - insert_only_hf_0_16_8
+      - insert_only_hf_0_16_16
+      - insert_only_hf_1_1_1
+      - insert_only_hf_1_1_4
+      - insert_only_hf_1_1_8
+      - insert_only_hf_1_1_16
+      - insert_only_hf_1_4_1
+      - insert_only_hf_1_4_4
+      - insert_only_hf_1_4_8
+      - insert_only_hf_1_4_16
+      - insert_only_hf_1_8_1
+      - insert_only_hf_1_8_4
+      - insert_only_hf_1_8_8
+      - insert_only_hf_1_8_16
+      - insert_only_hf_1_16_1
+      - insert_only_hf_1_16_4
+      - insert_only_hf_1_16_8
+      - insert_only_hf_1_16_16
+      - insert_only_hf_5_1_1
+      - insert_only_hf_5_1_4
+      - insert_only_hf_5_1_8
+      - insert_only_hf_5_1_16
+      - insert_only_hf_5_4_1
+      - insert_only_hf_5_4_4
+      - insert_only_hf_5_4_8
+      - insert_only_hf_5_4_16
+      - insert_only_hf_5_8_1
+      - insert_only_hf_5_8_4
+      - insert_only_hf_5_8_8
+      - insert_only_hf_5_8_16
+      - insert_only_hf_5_16_1
+      - insert_only_hf_5_16_4
+      - insert_only_hf_5_16_8
+      - insert_only_hf_5_16_16
+      - insert_only_hf_10_1_1
+      - insert_only_hf_10_1_4
+      - insert_only_hf_10_1_8
+      - insert_only_hf_10_1_16
+      - insert_only_hf_10_4_1
+      - insert_only_hf_10_4_4
+      - insert_only_hf_10_4_8
+      - insert_only_hf_10_4_16
+      - insert_only_hf_10_8_1
+      - insert_only_hf_10_8_4
+      - insert_only_hf_10_8_8
+      - insert_only_hf_10_8_16
+      - insert_only_hf_10_16_1
+      - insert_only_hf_10_16_4
+      - insert_only_hf_10_16_8
+      - insert_only_hf_10_16_16
+      - insert_only_mhf_0_1_1
+      - insert_only_mhf_0_1_4
+      - insert_only_mhf_0_1_8
+      - insert_only_mhf_0_1_16
+      - insert_only_mhf_0_4_1
+      - insert_only_mhf_0_4_4
+      - insert_only_mhf_0_4_8
+      - insert_only_mhf_0_4_16
+      - insert_only_mhf_0_8_1
+      - insert_only_mhf_0_8_4
+      - insert_only_mhf_0_8_8
+      - insert_only_mhf_0_8_16
+      - insert_only_mhf_0_16_1
+      - insert_only_mhf_0_16_4
+      - insert_only_mhf_0_16_8
+      - insert_only_mhf_0_16_16
+      - insert_only_mhf_1_1_1
+      - insert_only_mhf_1_1_4
+      - insert_only_mhf_1_1_8
+      - insert_only_mhf_1_1_16
+      - insert_only_mhf_1_4_1
+      - insert_only_mhf_1_4_4
+      - insert_only_mhf_1_4_8
+      - insert_only_mhf_1_4_16
+      - insert_only_mhf_1_8_1
+      - insert_only_mhf_1_8_4
+      - insert_only_mhf_1_8_8
+      - insert_only_mhf_1_8_16
+      - insert_only_mhf_1_16_1
+      - insert_only_mhf_1_16_4
+      - insert_only_mhf_1_16_8
+      - insert_only_mhf_1_16_16
+      - insert_only_mhf_5_1_1
+      - insert_only_mhf_5_1_4
+      - insert_only_mhf_5_1_8
+      - insert_only_mhf_5_1_16
+      - insert_only_mhf_5_4_1
+      - insert_only_mhf_5_4_4
+      - insert_only_mhf_5_4_8
+      - insert_only_mhf_5_4_16
+      - insert_only_mhf_5_8_1
+      - insert_only_mhf_5_8_4
+      - insert_only_mhf_5_8_8
+      - insert_only_mhf_5_8_16
+      - insert_only_mhf_5_16_1
+      - insert_only_mhf_5_16_4
+      - insert_only_mhf_5_16_8
+      - insert_only_mhf_5_16_16
+      - insert_only_mhf_10_1_1
+      - insert_only_mhf_10_1_4
+      - insert_only_mhf_10_1_8
+      - insert_only_mhf_10_1_16
+      - insert_only_mhf_10_4_1
+      - insert_only_mhf_10_4_4
+      - insert_only_mhf_10_4_8
+      - insert_only_mhf_10_4_16
+      - insert_only_mhf_10_8_1
+      - insert_only_mhf_10_8_4
+      - insert_only_mhf_10_8_8
+      - insert_only_mhf_10_8_16
+      - insert_only_mhf_10_16_1
+      - insert_only_mhf_10_16_4
+      - insert_only_mhf_10_16_8
+      - insert_only_mhf_10_16_16
+      - insert_only_vhf_0_1_1
+      - insert_only_vhf_0_1_4
+      - insert_only_vhf_0_1_8
+      - insert_only_vhf_0_1_16
+      - insert_only_vhf_0_4_1
+      - insert_only_vhf_0_4_4
+      - insert_only_vhf_0_4_8
+      - insert_only_vhf_0_4_16
+      - insert_only_vhf_0_8_1
+      - insert_only_vhf_0_8_4
+      - insert_only_vhf_0_8_8
+      - insert_only_vhf_0_8_16
+      - insert_only_vhf_0_16_1
+      - insert_only_vhf_0_16_4
+      - insert_only_vhf_0_16_8
+      - insert_only_vhf_0_16_16
+      - insert_only_vhf_1_1_1
+      - insert_only_vhf_1_1_4
+      - insert_only_vhf_1_1_8
+      - insert_only_vhf_1_1_16
+      - insert_only_vhf_1_4_1
+      - insert_only_vhf_1_4_4
+      - insert_only_vhf_1_4_8
+      - insert_only_vhf_1_4_16
+      - insert_only_vhf_1_8_1
+      - insert_only_vhf_1_8_4
+      - insert_only_vhf_1_8_8
+      - insert_only_vhf_1_8_16
+      - insert_only_vhf_1_16_1
+      - insert_only_vhf_1_16_4
+      - insert_only_vhf_1_16_8
+      - insert_only_vhf_1_16_16
+      - insert_only_vhf_5_1_1
+      - insert_only_vhf_5_1_4
+      - insert_only_vhf_5_1_8
+      - insert_only_vhf_5_1_16
+      - insert_only_vhf_5_4_1
+      - insert_only_vhf_5_4_4
+      - insert_only_vhf_5_4_8
+      - insert_only_vhf_5_4_16
+      - insert_only_vhf_5_8_1
+      - insert_only_vhf_5_8_4
+      - insert_only_vhf_5_8_8
+      - insert_only_vhf_5_8_16
+      - insert_only_vhf_5_16_1
+      - insert_only_vhf_5_16_4
+      - insert_only_vhf_5_16_8
+      - insert_only_vhf_5_16_16
+      - insert_only_vhf_10_1_1
+      - insert_only_vhf_10_1_4
+      - insert_only_vhf_10_1_8
+      - insert_only_vhf_10_1_16
+      - insert_only_vhf_10_4_1
+      - insert_only_vhf_10_4_4
+      - insert_only_vhf_10_4_8
+      - insert_only_vhf_10_4_16
+      - insert_only_vhf_10_8_1
+      - insert_only_vhf_10_8_4
+      - insert_only_vhf_10_8_8
+      - insert_only_vhf_10_8_16
+      - insert_only_vhf_10_16_1
+      - insert_only_vhf_10_16_4
+      - insert_only_vhf_10_16_8
+      - insert_only_vhf_10_16_16
+      - insert_only_blimit_0_1_1
+      - insert_only_blimit_0_1_4
+      - insert_only_blimit_0_1_8
+      - insert_only_blimit_0_1_16
+      - insert_only_blimit_0_4_1
+      - insert_only_blimit_0_4_4
+      - insert_only_blimit_0_4_8
+      - insert_only_blimit_0_4_16
+      - insert_only_blimit_0_8_1
+      - insert_only_blimit_0_8_4
+      - insert_only_blimit_0_8_8
+      - insert_only_blimit_0_8_16
+      - insert_only_blimit_0_16_1
+      - insert_only_blimit_0_16_4
+      - insert_only_blimit_0_16_8
+      - insert_only_blimit_0_16_16
+      - insert_only_blimit_1_1_1
+      - insert_only_blimit_1_1_4
+      - insert_only_blimit_1_1_8
+      - insert_only_blimit_1_1_16
+      - insert_only_blimit_1_4_1
+      - insert_only_blimit_1_4_4
+      - insert_only_blimit_1_4_8
+      - insert_only_blimit_1_4_16
+      - insert_only_blimit_1_8_1
+      - insert_only_blimit_1_8_4
+      - insert_only_blimit_1_8_8
+      - insert_only_blimit_1_8_16
+      - insert_only_blimit_1_16_1
+      - insert_only_blimit_1_16_4
+      - insert_only_blimit_1_16_8
+      - insert_only_blimit_1_16_16
+      - insert_only_blimit_5_1_1
+      - insert_only_blimit_5_1_4
+      - insert_only_blimit_5_1_8
+      - insert_only_blimit_5_1_16
+      - insert_only_blimit_5_4_1
+      - insert_only_blimit_5_4_4
+      - insert_only_blimit_5_4_8
+      - insert_only_blimit_5_4_16
+      - insert_only_blimit_5_8_1
+      - insert_only_blimit_5_8_4
+      - insert_only_blimit_5_8_8
+      - insert_only_blimit_5_8_16
+      - insert_only_blimit_5_16_1
+      - insert_only_blimit_5_16_4
+      - insert_only_blimit_5_16_8
+      - insert_only_blimit_5_16_16
+      - insert_only_blimit_10_1_1
+      - insert_only_blimit_10_1_4
+      - insert_only_blimit_10_1_8
+      - insert_only_blimit_10_1_16
+      - insert_only_blimit_10_4_1
+      - insert_only_blimit_10_4_4
+      - insert_only_blimit_10_4_8
+      - insert_only_blimit_10_4_16
+      - insert_only_blimit_10_8_1
+      - insert_only_blimit_10_8_4
+      - insert_only_blimit_10_8_8
+      - insert_only_blimit_10_8_16
+      - insert_only_blimit_10_16_1
+      - insert_only_blimit_10_16_4
+      - insert_only_blimit_10_16_8
+      - insert_only_blimit_10_16_16
+      - insert_only_pbl_0_1_1
+      - insert_only_pbl_0_1_4
+      - insert_only_pbl_0_1_8
+      - insert_only_pbl_0_1_16
+      - insert_only_pbl_0_4_1
+      - insert_only_pbl_0_4_4
+      - insert_only_pbl_0_4_8
+      - insert_only_pbl_0_4_16
+      - insert_only_pbl_0_8_1
+      - insert_only_pbl_0_8_4
+      - insert_only_pbl_0_8_8
+      - insert_only_pbl_0_8_16
+      - insert_only_pbl_0_16_1
+      - insert_only_pbl_0_16_4
+      - insert_only_pbl_0_16_8
+      - insert_only_pbl_0_16_16
+      - insert_only_pbl_1_1_1
+      - insert_only_pbl_1_1_4
+      - insert_only_pbl_1_1_8
+      - insert_only_pbl_1_1_16
+      - insert_only_pbl_1_4_1
+      - insert_only_pbl_1_4_4
+      - insert_only_pbl_1_4_8
+      - insert_only_pbl_1_4_16
+      - insert_only_pbl_1_8_1
+      - insert_only_pbl_1_8_4
+      - insert_only_pbl_1_8_8
+      - insert_only_pbl_1_8_16
+      - insert_only_pbl_1_16_1
+      - insert_only_pbl_1_16_4
+      - insert_only_pbl_1_16_8
+      - insert_only_pbl_1_16_16
+      - insert_only_pbl_5_1_1
+      - insert_only_pbl_5_1_4
+      - insert_only_pbl_5_1_8
+      - insert_only_pbl_5_1_16
+      - insert_only_pbl_5_4_1
+      - insert_only_pbl_5_4_4
+      - insert_only_pbl_5_4_8
+      - insert_only_pbl_5_4_16
+      - insert_only_pbl_5_8_1
+      - insert_only_pbl_5_8_4
+      - insert_only_pbl_5_8_8
+      - insert_only_pbl_5_8_16
+      - insert_only_pbl_5_16_1
+      - insert_only_pbl_5_16_4
+      - insert_only_pbl_5_16_8
+      - insert_only_pbl_5_16_16
+      - insert_only_pbl_10_1_1
+      - insert_only_pbl_10_1_4
+      - insert_only_pbl_10_1_8
+      - insert_only_pbl_10_1_16
+      - insert_only_pbl_10_4_1
+      - insert_only_pbl_10_4_4
+      - insert_only_pbl_10_4_8
+      - insert_only_pbl_10_4_16
+      - insert_only_pbl_10_8_1
+      - insert_only_pbl_10_8_4
+      - insert_only_pbl_10_8_8
+      - insert_only_pbl_10_8_16
+      - insert_only_pbl_10_16_1
+      - insert_only_pbl_10_16_4
+      - insert_only_pbl_10_16_8
+      - insert_only_pbl_10_16_16
+genny_metrics:
+  tests:
+  - "InsertActor.load.inserts"
+  metrics:
+  - "OperationsTotal"
+  - "DocumentsTotal"
+  - "SizeTotal"
+  - "DurationTotal"
+  - "OverheadTotal"
+  - "ErrorsTotal"
+  - "AverageLatency"
+  - "AverageSize"
+  - "OperationThroughput"
+  - "DocumentThroughput"
+  - "SizeThroughput"
+  - "LatencyMin"
+  - "LatencyMax"
+  - "Latency50thPercentile"
+  - "Latency80thPercentile"
+  - "Latency90thPercentile"
+  - "Latency95thPercentile"
+  - "Latency99thPercentile"
+  - "WorkersMin"
+  - "WorkersMax"
+  - "ErrorRate"
+storage_metrics:
+  tests:
+  - "crud_actor_qe Storage Metrics"
+  metrics:
+  - "Average Growth in /data/dbs/ (bytes/s)"
+  - "End size of /data/dbs/ (bytes)"
+timing_metrics:
+  tests:
+  - "insert_only_vlf_0_1_1 Timing Metrics"
+  - "insert_only_vlf_0_1_4 Timing Metrics"
+  - "insert_only_vlf_0_1_8 Timing Metrics"
+  - "insert_only_vlf_0_1_16 Timing Metrics"
+  - "insert_only_vlf_0_4_1 Timing Metrics"
+  - "insert_only_vlf_0_4_4 Timing Metrics"
+  - "insert_only_vlf_0_4_8 Timing Metrics"
+  - "insert_only_vlf_0_4_16 Timing Metrics"
+  - "insert_only_vlf_0_8_1 Timing Metrics"
+  - "insert_only_vlf_0_8_4 Timing Metrics"
+  - "insert_only_vlf_0_8_8 Timing Metrics"
+  - "insert_only_vlf_0_8_16 Timing Metrics"
+  - "insert_only_vlf_0_16_1 Timing Metrics"
+  - "insert_only_vlf_0_16_4 Timing Metrics"
+  - "insert_only_vlf_0_16_8 Timing Metrics"
+  - "insert_only_vlf_0_16_16 Timing Metrics"
+  - "insert_only_vlf_1_1_1 Timing Metrics"
+  - "insert_only_vlf_1_1_4 Timing Metrics"
+  - "insert_only_vlf_1_1_8 Timing Metrics"
+  - "insert_only_vlf_1_1_16 Timing Metrics"
+  - "insert_only_vlf_1_4_1 Timing Metrics"
+  - "insert_only_vlf_1_4_4 Timing Metrics"
+  - "insert_only_vlf_1_4_8 Timing Metrics"
+  - "insert_only_vlf_1_4_16 Timing Metrics"
+  - "insert_only_vlf_1_8_1 Timing Metrics"
+  - "insert_only_vlf_1_8_4 Timing Metrics"
+  - "insert_only_vlf_1_8_8 Timing Metrics"
+  - "insert_only_vlf_1_8_16 Timing Metrics"
+  - "insert_only_vlf_1_16_1 Timing Metrics"
+  - "insert_only_vlf_1_16_4 Timing Metrics"
+  - "insert_only_vlf_1_16_8 Timing Metrics"
+  - "insert_only_vlf_1_16_16 Timing Metrics"
+  - "insert_only_vlf_5_1_1 Timing Metrics"
+  - "insert_only_vlf_5_1_4 Timing Metrics"
+  - "insert_only_vlf_5_1_8 Timing Metrics"
+  - "insert_only_vlf_5_1_16 Timing Metrics"
+  - "insert_only_vlf_5_4_1 Timing Metrics"
+  - "insert_only_vlf_5_4_4 Timing Metrics"
+  - "insert_only_vlf_5_4_8 Timing Metrics"
+  - "insert_only_vlf_5_4_16 Timing Metrics"
+  - "insert_only_vlf_5_8_1 Timing Metrics"
+  - "insert_only_vlf_5_8_4 Timing Metrics"
+  - "insert_only_vlf_5_8_8 Timing Metrics"
+  - "insert_only_vlf_5_8_16 Timing Metrics"
+  - "insert_only_vlf_5_16_1 Timing Metrics"
+  - "insert_only_vlf_5_16_4 Timing Metrics"
+  - "insert_only_vlf_5_16_8 Timing Metrics"
+  - "insert_only_vlf_5_16_16 Timing Metrics"
+  - "insert_only_vlf_10_1_1 Timing Metrics"
+  - "insert_only_vlf_10_1_4 Timing Metrics"
+  - "insert_only_vlf_10_1_8 Timing Metrics"
+  - "insert_only_vlf_10_1_16 Timing Metrics"
+  - "insert_only_vlf_10_4_1 Timing Metrics"
+  - "insert_only_vlf_10_4_4 Timing Metrics"
+  - "insert_only_vlf_10_4_8 Timing Metrics"
+  - "insert_only_vlf_10_4_16 Timing Metrics"
+  - "insert_only_vlf_10_8_1 Timing Metrics"
+  - "insert_only_vlf_10_8_4 Timing Metrics"
+  - "insert_only_vlf_10_8_8 Timing Metrics"
+  - "insert_only_vlf_10_8_16 Timing Metrics"
+  - "insert_only_vlf_10_16_1 Timing Metrics"
+  - "insert_only_vlf_10_16_4 Timing Metrics"
+  - "insert_only_vlf_10_16_8 Timing Metrics"
+  - "insert_only_vlf_10_16_16 Timing Metrics"
+  - "insert_only_mlf_0_1_1 Timing Metrics"
+  - "insert_only_mlf_0_1_4 Timing Metrics"
+  - "insert_only_mlf_0_1_8 Timing Metrics"
+  - "insert_only_mlf_0_1_16 Timing Metrics"
+  - "insert_only_mlf_0_4_1 Timing Metrics"
+  - "insert_only_mlf_0_4_4 Timing Metrics"
+  - "insert_only_mlf_0_4_8 Timing Metrics"
+  - "insert_only_mlf_0_4_16 Timing Metrics"
+  - "insert_only_mlf_0_8_1 Timing Metrics"
+  - "insert_only_mlf_0_8_4 Timing Metrics"
+  - "insert_only_mlf_0_8_8 Timing Metrics"
+  - "insert_only_mlf_0_8_16 Timing Metrics"
+  - "insert_only_mlf_0_16_1 Timing Metrics"
+  - "insert_only_mlf_0_16_4 Timing Metrics"
+  - "insert_only_mlf_0_16_8 Timing Metrics"
+  - "insert_only_mlf_0_16_16 Timing Metrics"
+  - "insert_only_mlf_1_1_1 Timing Metrics"
+  - "insert_only_mlf_1_1_4 Timing Metrics"
+  - "insert_only_mlf_1_1_8 Timing Metrics"
+  - "insert_only_mlf_1_1_16 Timing Metrics"
+  - "insert_only_mlf_1_4_1 Timing Metrics"
+  - "insert_only_mlf_1_4_4 Timing Metrics"
+  - "insert_only_mlf_1_4_8 Timing Metrics"
+  - "insert_only_mlf_1_4_16 Timing Metrics"
+  - "insert_only_mlf_1_8_1 Timing Metrics"
+  - "insert_only_mlf_1_8_4 Timing Metrics"
+  - "insert_only_mlf_1_8_8 Timing Metrics"
+  - "insert_only_mlf_1_8_16 Timing Metrics"
+  - "insert_only_mlf_1_16_1 Timing Metrics"
+  - "insert_only_mlf_1_16_4 Timing Metrics"
+  - "insert_only_mlf_1_16_8 Timing Metrics"
+  - "insert_only_mlf_1_16_16 Timing Metrics"
+  - "insert_only_mlf_5_1_1 Timing Metrics"
+  - "insert_only_mlf_5_1_4 Timing Metrics"
+  - "insert_only_mlf_5_1_8 Timing Metrics"
+  - "insert_only_mlf_5_1_16 Timing Metrics"
+  - "insert_only_mlf_5_4_1 Timing Metrics"
+  - "insert_only_mlf_5_4_4 Timing Metrics"
+  - "insert_only_mlf_5_4_8 Timing Metrics"
+  - "insert_only_mlf_5_4_16 Timing Metrics"
+  - "insert_only_mlf_5_8_1 Timing Metrics"
+  - "insert_only_mlf_5_8_4 Timing Metrics"
+  - "insert_only_mlf_5_8_8 Timing Metrics"
+  - "insert_only_mlf_5_8_16 Timing Metrics"
+  - "insert_only_mlf_5_16_1 Timing Metrics"
+  - "insert_only_mlf_5_16_4 Timing Metrics"
+  - "insert_only_mlf_5_16_8 Timing Metrics"
+  - "insert_only_mlf_5_16_16 Timing Metrics"
+  - "insert_only_mlf_10_1_1 Timing Metrics"
+  - "insert_only_mlf_10_1_4 Timing Metrics"
+  - "insert_only_mlf_10_1_8 Timing Metrics"
+  - "insert_only_mlf_10_1_16 Timing Metrics"
+  - "insert_only_mlf_10_4_1 Timing Metrics"
+  - "insert_only_mlf_10_4_4 Timing Metrics"
+  - "insert_only_mlf_10_4_8 Timing Metrics"
+  - "insert_only_mlf_10_4_16 Timing Metrics"
+  - "insert_only_mlf_10_8_1 Timing Metrics"
+  - "insert_only_mlf_10_8_4 Timing Metrics"
+  - "insert_only_mlf_10_8_8 Timing Metrics"
+  - "insert_only_mlf_10_8_16 Timing Metrics"
+  - "insert_only_mlf_10_16_1 Timing Metrics"
+  - "insert_only_mlf_10_16_4 Timing Metrics"
+  - "insert_only_mlf_10_16_8 Timing Metrics"
+  - "insert_only_mlf_10_16_16 Timing Metrics"
+  - "insert_only_lf_0_1_1 Timing Metrics"
+  - "insert_only_lf_0_1_4 Timing Metrics"
+  - "insert_only_lf_0_1_8 Timing Metrics"
+  - "insert_only_lf_0_1_16 Timing Metrics"
+  - "insert_only_lf_0_4_1 Timing Metrics"
+  - "insert_only_lf_0_4_4 Timing Metrics"
+  - "insert_only_lf_0_4_8 Timing Metrics"
+  - "insert_only_lf_0_4_16 Timing Metrics"
+  - "insert_only_lf_0_8_1 Timing Metrics"
+  - "insert_only_lf_0_8_4 Timing Metrics"
+  - "insert_only_lf_0_8_8 Timing Metrics"
+  - "insert_only_lf_0_8_16 Timing Metrics"
+  - "insert_only_lf_0_16_1 Timing Metrics"
+  - "insert_only_lf_0_16_4 Timing Metrics"
+  - "insert_only_lf_0_16_8 Timing Metrics"
+  - "insert_only_lf_0_16_16 Timing Metrics"
+  - "insert_only_lf_1_1_1 Timing Metrics"
+  - "insert_only_lf_1_1_4 Timing Metrics"
+  - "insert_only_lf_1_1_8 Timing Metrics"
+  - "insert_only_lf_1_1_16 Timing Metrics"
+  - "insert_only_lf_1_4_1 Timing Metrics"
+  - "insert_only_lf_1_4_4 Timing Metrics"
+  - "insert_only_lf_1_4_8 Timing Metrics"
+  - "insert_only_lf_1_4_16 Timing Metrics"
+  - "insert_only_lf_1_8_1 Timing Metrics"
+  - "insert_only_lf_1_8_4 Timing Metrics"
+  - "insert_only_lf_1_8_8 Timing Metrics"
+  - "insert_only_lf_1_8_16 Timing Metrics"
+  - "insert_only_lf_1_16_1 Timing Metrics"
+  - "insert_only_lf_1_16_4 Timing Metrics"
+  - "insert_only_lf_1_16_8 Timing Metrics"
+  - "insert_only_lf_1_16_16 Timing Metrics"
+  - "insert_only_lf_5_1_1 Timing Metrics"
+  - "insert_only_lf_5_1_4 Timing Metrics"
+  - "insert_only_lf_5_1_8 Timing Metrics"
+  - "insert_only_lf_5_1_16 Timing Metrics"
+  - "insert_only_lf_5_4_1 Timing Metrics"
+  - "insert_only_lf_5_4_4 Timing Metrics"
+  - "insert_only_lf_5_4_8 Timing Metrics"
+  - "insert_only_lf_5_4_16 Timing Metrics"
+  - "insert_only_lf_5_8_1 Timing Metrics"
+  - "insert_only_lf_5_8_4 Timing Metrics"
+  - "insert_only_lf_5_8_8 Timing Metrics"
+  - "insert_only_lf_5_8_16 Timing Metrics"
+  - "insert_only_lf_5_16_1 Timing Metrics"
+  - "insert_only_lf_5_16_4 Timing Metrics"
+  - "insert_only_lf_5_16_8 Timing Metrics"
+  - "insert_only_lf_5_16_16 Timing Metrics"
+  - "insert_only_lf_10_1_1 Timing Metrics"
+  - "insert_only_lf_10_1_4 Timing Metrics"
+  - "insert_only_lf_10_1_8 Timing Metrics"
+  - "insert_only_lf_10_1_16 Timing Metrics"
+  - "insert_only_lf_10_4_1 Timing Metrics"
+  - "insert_only_lf_10_4_4 Timing Metrics"
+  - "insert_only_lf_10_4_8 Timing Metrics"
+  - "insert_only_lf_10_4_16 Timing Metrics"
+  - "insert_only_lf_10_8_1 Timing Metrics"
+  - "insert_only_lf_10_8_4 Timing Metrics"
+  - "insert_only_lf_10_8_8 Timing Metrics"
+  - "insert_only_lf_10_8_16 Timing Metrics"
+  - "insert_only_lf_10_16_1 Timing Metrics"
+  - "insert_only_lf_10_16_4 Timing Metrics"
+  - "insert_only_lf_10_16_8 Timing Metrics"
+  - "insert_only_lf_10_16_16 Timing Metrics"
+  - "insert_only_hf_0_1_1 Timing Metrics"
+  - "insert_only_hf_0_1_4 Timing Metrics"
+  - "insert_only_hf_0_1_8 Timing Metrics"
+  - "insert_only_hf_0_1_16 Timing Metrics"
+  - "insert_only_hf_0_4_1 Timing Metrics"
+  - "insert_only_hf_0_4_4 Timing Metrics"
+  - "insert_only_hf_0_4_8 Timing Metrics"
+  - "insert_only_hf_0_4_16 Timing Metrics"
+  - "insert_only_hf_0_8_1 Timing Metrics"
+  - "insert_only_hf_0_8_4 Timing Metrics"
+  - "insert_only_hf_0_8_8 Timing Metrics"
+  - "insert_only_hf_0_8_16 Timing Metrics"
+  - "insert_only_hf_0_16_1 Timing Metrics"
+  - "insert_only_hf_0_16_4 Timing Metrics"
+  - "insert_only_hf_0_16_8 Timing Metrics"
+  - "insert_only_hf_0_16_16 Timing Metrics"
+  - "insert_only_hf_1_1_1 Timing Metrics"
+  - "insert_only_hf_1_1_4 Timing Metrics"
+  - "insert_only_hf_1_1_8 Timing Metrics"
+  - "insert_only_hf_1_1_16 Timing Metrics"
+  - "insert_only_hf_1_4_1 Timing Metrics"
+  - "insert_only_hf_1_4_4 Timing Metrics"
+  - "insert_only_hf_1_4_8 Timing Metrics"
+  - "insert_only_hf_1_4_16 Timing Metrics"
+  - "insert_only_hf_1_8_1 Timing Metrics"
+  - "insert_only_hf_1_8_4 Timing Metrics"
+  - "insert_only_hf_1_8_8 Timing Metrics"
+  - "insert_only_hf_1_8_16 Timing Metrics"
+  - "insert_only_hf_1_16_1 Timing Metrics"
+  - "insert_only_hf_1_16_4 Timing Metrics"
+  - "insert_only_hf_1_16_8 Timing Metrics"
+  - "insert_only_hf_1_16_16 Timing Metrics"
+  - "insert_only_hf_5_1_1 Timing Metrics"
+  - "insert_only_hf_5_1_4 Timing Metrics"
+  - "insert_only_hf_5_1_8 Timing Metrics"
+  - "insert_only_hf_5_1_16 Timing Metrics"
+  - "insert_only_hf_5_4_1 Timing Metrics"
+  - "insert_only_hf_5_4_4 Timing Metrics"
+  - "insert_only_hf_5_4_8 Timing Metrics"
+  - "insert_only_hf_5_4_16 Timing Metrics"
+  - "insert_only_hf_5_8_1 Timing Metrics"
+  - "insert_only_hf_5_8_4 Timing Metrics"
+  - "insert_only_hf_5_8_8 Timing Metrics"
+  - "insert_only_hf_5_8_16 Timing Metrics"
+  - "insert_only_hf_5_16_1 Timing Metrics"
+  - "insert_only_hf_5_16_4 Timing Metrics"
+  - "insert_only_hf_5_16_8 Timing Metrics"
+  - "insert_only_hf_5_16_16 Timing Metrics"
+  - "insert_only_hf_10_1_1 Timing Metrics"
+  - "insert_only_hf_10_1_4 Timing Metrics"
+  - "insert_only_hf_10_1_8 Timing Metrics"
+  - "insert_only_hf_10_1_16 Timing Metrics"
+  - "insert_only_hf_10_4_1 Timing Metrics"
+  - "insert_only_hf_10_4_4 Timing Metrics"
+  - "insert_only_hf_10_4_8 Timing Metrics"
+  - "insert_only_hf_10_4_16 Timing Metrics"
+  - "insert_only_hf_10_8_1 Timing Metrics"
+  - "insert_only_hf_10_8_4 Timing Metrics"
+  - "insert_only_hf_10_8_8 Timing Metrics"
+  - "insert_only_hf_10_8_16 Timing Metrics"
+  - "insert_only_hf_10_16_1 Timing Metrics"
+  - "insert_only_hf_10_16_4 Timing Metrics"
+  - "insert_only_hf_10_16_8 Timing Metrics"
+  - "insert_only_hf_10_16_16 Timing Metrics"
+  - "insert_only_mhf_0_1_1 Timing Metrics"
+  - "insert_only_mhf_0_1_4 Timing Metrics"
+  - "insert_only_mhf_0_1_8 Timing Metrics"
+  - "insert_only_mhf_0_1_16 Timing Metrics"
+  - "insert_only_mhf_0_4_1 Timing Metrics"
+  - "insert_only_mhf_0_4_4 Timing Metrics"
+  - "insert_only_mhf_0_4_8 Timing Metrics"
+  - "insert_only_mhf_0_4_16 Timing Metrics"
+  - "insert_only_mhf_0_8_1 Timing Metrics"
+  - "insert_only_mhf_0_8_4 Timing Metrics"
+  - "insert_only_mhf_0_8_8 Timing Metrics"
+  - "insert_only_mhf_0_8_16 Timing Metrics"
+  - "insert_only_mhf_0_16_1 Timing Metrics"
+  - "insert_only_mhf_0_16_4 Timing Metrics"
+  - "insert_only_mhf_0_16_8 Timing Metrics"
+  - "insert_only_mhf_0_16_16 Timing Metrics"
+  - "insert_only_mhf_1_1_1 Timing Metrics"
+  - "insert_only_mhf_1_1_4 Timing Metrics"
+  - "insert_only_mhf_1_1_8 Timing Metrics"
+  - "insert_only_mhf_1_1_16 Timing Metrics"
+  - "insert_only_mhf_1_4_1 Timing Metrics"
+  - "insert_only_mhf_1_4_4 Timing Metrics"
+  - "insert_only_mhf_1_4_8 Timing Metrics"
+  - "insert_only_mhf_1_4_16 Timing Metrics"
+  - "insert_only_mhf_1_8_1 Timing Metrics"
+  - "insert_only_mhf_1_8_4 Timing Metrics"
+  - "insert_only_mhf_1_8_8 Timing Metrics"
+  - "insert_only_mhf_1_8_16 Timing Metrics"
+  - "insert_only_mhf_1_16_1 Timing Metrics"
+  - "insert_only_mhf_1_16_4 Timing Metrics"
+  - "insert_only_mhf_1_16_8 Timing Metrics"
+  - "insert_only_mhf_1_16_16 Timing Metrics"
+  - "insert_only_mhf_5_1_1 Timing Metrics"
+  - "insert_only_mhf_5_1_4 Timing Metrics"
+  - "insert_only_mhf_5_1_8 Timing Metrics"
+  - "insert_only_mhf_5_1_16 Timing Metrics"
+  - "insert_only_mhf_5_4_1 Timing Metrics"
+  - "insert_only_mhf_5_4_4 Timing Metrics"
+  - "insert_only_mhf_5_4_8 Timing Metrics"
+  - "insert_only_mhf_5_4_16 Timing Metrics"
+  - "insert_only_mhf_5_8_1 Timing Metrics"
+  - "insert_only_mhf_5_8_4 Timing Metrics"
+  - "insert_only_mhf_5_8_8 Timing Metrics"
+  - "insert_only_mhf_5_8_16 Timing Metrics"
+  - "insert_only_mhf_5_16_1 Timing Metrics"
+  - "insert_only_mhf_5_16_4 Timing Metrics"
+  - "insert_only_mhf_5_16_8 Timing Metrics"
+  - "insert_only_mhf_5_16_16 Timing Metrics"
+  - "insert_only_mhf_10_1_1 Timing Metrics"
+  - "insert_only_mhf_10_1_4 Timing Metrics"
+  - "insert_only_mhf_10_1_8 Timing Metrics"
+  - "insert_only_mhf_10_1_16 Timing Metrics"
+  - "insert_only_mhf_10_4_1 Timing Metrics"
+  - "insert_only_mhf_10_4_4 Timing Metrics"
+  - "insert_only_mhf_10_4_8 Timing Metrics"
+  - "insert_only_mhf_10_4_16 Timing Metrics"
+  - "insert_only_mhf_10_8_1 Timing Metrics"
+  - "insert_only_mhf_10_8_4 Timing Metrics"
+  - "insert_only_mhf_10_8_8 Timing Metrics"
+  - "insert_only_mhf_10_8_16 Timing Metrics"
+  - "insert_only_mhf_10_16_1 Timing Metrics"
+  - "insert_only_mhf_10_16_4 Timing Metrics"
+  - "insert_only_mhf_10_16_8 Timing Metrics"
+  - "insert_only_mhf_10_16_16 Timing Metrics"
+  - "insert_only_vhf_0_1_1 Timing Metrics"
+  - "insert_only_vhf_0_1_4 Timing Metrics"
+  - "insert_only_vhf_0_1_8 Timing Metrics"
+  - "insert_only_vhf_0_1_16 Timing Metrics"
+  - "insert_only_vhf_0_4_1 Timing Metrics"
+  - "insert_only_vhf_0_4_4 Timing Metrics"
+  - "insert_only_vhf_0_4_8 Timing Metrics"
+  - "insert_only_vhf_0_4_16 Timing Metrics"
+  - "insert_only_vhf_0_8_1 Timing Metrics"
+  - "insert_only_vhf_0_8_4 Timing Metrics"
+  - "insert_only_vhf_0_8_8 Timing Metrics"
+  - "insert_only_vhf_0_8_16 Timing Metrics"
+  - "insert_only_vhf_0_16_1 Timing Metrics"
+  - "insert_only_vhf_0_16_4 Timing Metrics"
+  - "insert_only_vhf_0_16_8 Timing Metrics"
+  - "insert_only_vhf_0_16_16 Timing Metrics"
+  - "insert_only_vhf_1_1_1 Timing Metrics"
+  - "insert_only_vhf_1_1_4 Timing Metrics"
+  - "insert_only_vhf_1_1_8 Timing Metrics"
+  - "insert_only_vhf_1_1_16 Timing Metrics"
+  - "insert_only_vhf_1_4_1 Timing Metrics"
+  - "insert_only_vhf_1_4_4 Timing Metrics"
+  - "insert_only_vhf_1_4_8 Timing Metrics"
+  - "insert_only_vhf_1_4_16 Timing Metrics"
+  - "insert_only_vhf_1_8_1 Timing Metrics"
+  - "insert_only_vhf_1_8_4 Timing Metrics"
+  - "insert_only_vhf_1_8_8 Timing Metrics"
+  - "insert_only_vhf_1_8_16 Timing Metrics"
+  - "insert_only_vhf_1_16_1 Timing Metrics"
+  - "insert_only_vhf_1_16_4 Timing Metrics"
+  - "insert_only_vhf_1_16_8 Timing Metrics"
+  - "insert_only_vhf_1_16_16 Timing Metrics"
+  - "insert_only_vhf_5_1_1 Timing Metrics"
+  - "insert_only_vhf_5_1_4 Timing Metrics"
+  - "insert_only_vhf_5_1_8 Timing Metrics"
+  - "insert_only_vhf_5_1_16 Timing Metrics"
+  - "insert_only_vhf_5_4_1 Timing Metrics"
+  - "insert_only_vhf_5_4_4 Timing Metrics"
+  - "insert_only_vhf_5_4_8 Timing Metrics"
+  - "insert_only_vhf_5_4_16 Timing Metrics"
+  - "insert_only_vhf_5_8_1 Timing Metrics"
+  - "insert_only_vhf_5_8_4 Timing Metrics"
+  - "insert_only_vhf_5_8_8 Timing Metrics"
+  - "insert_only_vhf_5_8_16 Timing Metrics"
+  - "insert_only_vhf_5_16_1 Timing Metrics"
+  - "insert_only_vhf_5_16_4 Timing Metrics"
+  - "insert_only_vhf_5_16_8 Timing Metrics"
+  - "insert_only_vhf_5_16_16 Timing Metrics"
+  - "insert_only_vhf_10_1_1 Timing Metrics"
+  - "insert_only_vhf_10_1_4 Timing Metrics"
+  - "insert_only_vhf_10_1_8 Timing Metrics"
+  - "insert_only_vhf_10_1_16 Timing Metrics"
+  - "insert_only_vhf_10_4_1 Timing Metrics"
+  - "insert_only_vhf_10_4_4 Timing Metrics"
+  - "insert_only_vhf_10_4_8 Timing Metrics"
+  - "insert_only_vhf_10_4_16 Timing Metrics"
+  - "insert_only_vhf_10_8_1 Timing Metrics"
+  - "insert_only_vhf_10_8_4 Timing Metrics"
+  - "insert_only_vhf_10_8_8 Timing Metrics"
+  - "insert_only_vhf_10_8_16 Timing Metrics"
+  - "insert_only_vhf_10_16_1 Timing Metrics"
+  - "insert_only_vhf_10_16_4 Timing Metrics"
+  - "insert_only_vhf_10_16_8 Timing Metrics"
+  - "insert_only_vhf_10_16_16 Timing Metrics"
+  - "insert_only_blimit_0_1_1 Timing Metrics"
+  - "insert_only_blimit_0_1_4 Timing Metrics"
+  - "insert_only_blimit_0_1_8 Timing Metrics"
+  - "insert_only_blimit_0_1_16 Timing Metrics"
+  - "insert_only_blimit_0_4_1 Timing Metrics"
+  - "insert_only_blimit_0_4_4 Timing Metrics"
+  - "insert_only_blimit_0_4_8 Timing Metrics"
+  - "insert_only_blimit_0_4_16 Timing Metrics"
+  - "insert_only_blimit_0_8_1 Timing Metrics"
+  - "insert_only_blimit_0_8_4 Timing Metrics"
+  - "insert_only_blimit_0_8_8 Timing Metrics"
+  - "insert_only_blimit_0_8_16 Timing Metrics"
+  - "insert_only_blimit_0_16_1 Timing Metrics"
+  - "insert_only_blimit_0_16_4 Timing Metrics"
+  - "insert_only_blimit_0_16_8 Timing Metrics"
+  - "insert_only_blimit_0_16_16 Timing Metrics"
+  - "insert_only_blimit_1_1_1 Timing Metrics"
+  - "insert_only_blimit_1_1_4 Timing Metrics"
+  - "insert_only_blimit_1_1_8 Timing Metrics"
+  - "insert_only_blimit_1_1_16 Timing Metrics"
+  - "insert_only_blimit_1_4_1 Timing Metrics"
+  - "insert_only_blimit_1_4_4 Timing Metrics"
+  - "insert_only_blimit_1_4_8 Timing Metrics"
+  - "insert_only_blimit_1_4_16 Timing Metrics"
+  - "insert_only_blimit_1_8_1 Timing Metrics"
+  - "insert_only_blimit_1_8_4 Timing Metrics"
+  - "insert_only_blimit_1_8_8 Timing Metrics"
+  - "insert_only_blimit_1_8_16 Timing Metrics"
+  - "insert_only_blimit_1_16_1 Timing Metrics"
+  - "insert_only_blimit_1_16_4 Timing Metrics"
+  - "insert_only_blimit_1_16_8 Timing Metrics"
+  - "insert_only_blimit_1_16_16 Timing Metrics"
+  - "insert_only_blimit_5_1_1 Timing Metrics"
+  - "insert_only_blimit_5_1_4 Timing Metrics"
+  - "insert_only_blimit_5_1_8 Timing Metrics"
+  - "insert_only_blimit_5_1_16 Timing Metrics"
+  - "insert_only_blimit_5_4_1 Timing Metrics"
+  - "insert_only_blimit_5_4_4 Timing Metrics"
+  - "insert_only_blimit_5_4_8 Timing Metrics"
+  - "insert_only_blimit_5_4_16 Timing Metrics"
+  - "insert_only_blimit_5_8_1 Timing Metrics"
+  - "insert_only_blimit_5_8_4 Timing Metrics"
+  - "insert_only_blimit_5_8_8 Timing Metrics"
+  - "insert_only_blimit_5_8_16 Timing Metrics"
+  - "insert_only_blimit_5_16_1 Timing Metrics"
+  - "insert_only_blimit_5_16_4 Timing Metrics"
+  - "insert_only_blimit_5_16_8 Timing Metrics"
+  - "insert_only_blimit_5_16_16 Timing Metrics"
+  - "insert_only_blimit_10_1_1 Timing Metrics"
+  - "insert_only_blimit_10_1_4 Timing Metrics"
+  - "insert_only_blimit_10_1_8 Timing Metrics"
+  - "insert_only_blimit_10_1_16 Timing Metrics"
+  - "insert_only_blimit_10_4_1 Timing Metrics"
+  - "insert_only_blimit_10_4_4 Timing Metrics"
+  - "insert_only_blimit_10_4_8 Timing Metrics"
+  - "insert_only_blimit_10_4_16 Timing Metrics"
+  - "insert_only_blimit_10_8_1 Timing Metrics"
+  - "insert_only_blimit_10_8_4 Timing Metrics"
+  - "insert_only_blimit_10_8_8 Timing Metrics"
+  - "insert_only_blimit_10_8_16 Timing Metrics"
+  - "insert_only_blimit_10_16_1 Timing Metrics"
+  - "insert_only_blimit_10_16_4 Timing Metrics"
+  - "insert_only_blimit_10_16_8 Timing Metrics"
+  - "insert_only_blimit_10_16_16 Timing Metrics"
+  - "insert_only_pbl_0_1_1 Timing Metrics"
+  - "insert_only_pbl_0_1_4 Timing Metrics"
+  - "insert_only_pbl_0_1_8 Timing Metrics"
+  - "insert_only_pbl_0_1_16 Timing Metrics"
+  - "insert_only_pbl_0_4_1 Timing Metrics"
+  - "insert_only_pbl_0_4_4 Timing Metrics"
+  - "insert_only_pbl_0_4_8 Timing Metrics"
+  - "insert_only_pbl_0_4_16 Timing Metrics"
+  - "insert_only_pbl_0_8_1 Timing Metrics"
+  - "insert_only_pbl_0_8_4 Timing Metrics"
+  - "insert_only_pbl_0_8_8 Timing Metrics"
+  - "insert_only_pbl_0_8_16 Timing Metrics"
+  - "insert_only_pbl_0_16_1 Timing Metrics"
+  - "insert_only_pbl_0_16_4 Timing Metrics"
+  - "insert_only_pbl_0_16_8 Timing Metrics"
+  - "insert_only_pbl_0_16_16 Timing Metrics"
+  - "insert_only_pbl_1_1_1 Timing Metrics"
+  - "insert_only_pbl_1_1_4 Timing Metrics"
+  - "insert_only_pbl_1_1_8 Timing Metrics"
+  - "insert_only_pbl_1_1_16 Timing Metrics"
+  - "insert_only_pbl_1_4_1 Timing Metrics"
+  - "insert_only_pbl_1_4_4 Timing Metrics"
+  - "insert_only_pbl_1_4_8 Timing Metrics"
+  - "insert_only_pbl_1_4_16 Timing Metrics"
+  - "insert_only_pbl_1_8_1 Timing Metrics"
+  - "insert_only_pbl_1_8_4 Timing Metrics"
+  - "insert_only_pbl_1_8_8 Timing Metrics"
+  - "insert_only_pbl_1_8_16 Timing Metrics"
+  - "insert_only_pbl_1_16_1 Timing Metrics"
+  - "insert_only_pbl_1_16_4 Timing Metrics"
+  - "insert_only_pbl_1_16_8 Timing Metrics"
+  - "insert_only_pbl_1_16_16 Timing Metrics"
+  - "insert_only_pbl_5_1_1 Timing Metrics"
+  - "insert_only_pbl_5_1_4 Timing Metrics"
+  - "insert_only_pbl_5_1_8 Timing Metrics"
+  - "insert_only_pbl_5_1_16 Timing Metrics"
+  - "insert_only_pbl_5_4_1 Timing Metrics"
+  - "insert_only_pbl_5_4_4 Timing Metrics"
+  - "insert_only_pbl_5_4_8 Timing Metrics"
+  - "insert_only_pbl_5_4_16 Timing Metrics"
+  - "insert_only_pbl_5_8_1 Timing Metrics"
+  - "insert_only_pbl_5_8_4 Timing Metrics"
+  - "insert_only_pbl_5_8_8 Timing Metrics"
+  - "insert_only_pbl_5_8_16 Timing Metrics"
+  - "insert_only_pbl_5_16_1 Timing Metrics"
+  - "insert_only_pbl_5_16_4 Timing Metrics"
+  - "insert_only_pbl_5_16_8 Timing Metrics"
+  - "insert_only_pbl_5_16_16 Timing Metrics"
+  - "insert_only_pbl_10_1_1 Timing Metrics"
+  - "insert_only_pbl_10_1_4 Timing Metrics"
+  - "insert_only_pbl_10_1_8 Timing Metrics"
+  - "insert_only_pbl_10_1_16 Timing Metrics"
+  - "insert_only_pbl_10_4_1 Timing Metrics"
+  - "insert_only_pbl_10_4_4 Timing Metrics"
+  - "insert_only_pbl_10_4_8 Timing Metrics"
+  - "insert_only_pbl_10_4_16 Timing Metrics"
+  - "insert_only_pbl_10_8_1 Timing Metrics"
+  - "insert_only_pbl_10_8_4 Timing Metrics"
+  - "insert_only_pbl_10_8_8 Timing Metrics"
+  - "insert_only_pbl_10_8_16 Timing Metrics"
+  - "insert_only_pbl_10_16_1 Timing Metrics"
+  - "insert_only_pbl_10_16_4 Timing Metrics"
+  - "insert_only_pbl_10_16_8 Timing Metrics"
+  - "insert_only_pbl_10_16_16 Timing Metrics"
+  metrics:
+  - "Total Duration (s)"
+curator: "/perftooling/curator"
